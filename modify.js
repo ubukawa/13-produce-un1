@@ -257,7 +257,6 @@ const lut = {
       minzoom: 6,
       maxzoom: 7
     }
-    if (f.tippecanoe.minzoom > 6) f.tippecanoe.minzoom = 6
     return f
   },
   osm_planet_waterways_small: f => {
@@ -281,22 +280,6 @@ const lut = {
     return f
   },
   // 3. boundary
-//  unhq_bndl25: f => {
-//    f.tippecanoe = {
-//      layer: 'hq_bnd',
-//      minzoom: 6,
-//      maxzoom: 7
-//    }
-//    return f
-//  },
-//  unhq_bndl05: f => {
-//    f.tippecanoe = {
-//      layer: 'hq_bnd',
-//      minzoom: 8,
-//      maxzoom: 9
-//    }
-//    return f
-//  },
   unhq_bndl: f => {
     f.tippecanoe = {
       layer: 'hq_bnd',
@@ -305,14 +288,6 @@ const lut = {
     }
     return f
   },
-//  unhq_bnda05_a1: f => {
-//    f.tippecanoe = {
-//      layer: 'hq_bnd',
-//      minzoom: 6,
-//      maxzoom: 7
-//    }
-//    return f
-//  }, 
  unhq_bnda_a1: f => {
     f.tippecanoe = {
       layer: 'hq_bnd',
@@ -353,14 +328,6 @@ const lut = {
     }
     return f
   },
-//  un_unmik_bnda_a2: f => {
-//    f.tippecanoe = {
-//      layer: 'mik_bnd',
-//      minzoom: 8,
-//      maxzoom: 9
-//    }
-//    return f
-//  },
   un_unmik_bnda_a3: f => {
     f.tippecanoe = {
       layer: 'mik_bnd',
@@ -942,3 +909,4 @@ const lut = {
 module.exports = (f) => {
   return postProcess(lut[f.properties._table](preProcess(f)))
 }
+
