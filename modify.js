@@ -871,16 +871,16 @@ const lut = {
 },
   osm_planet_pois_services: f => {
     f.tippecanoe = {
-      layer: 'servicep',
-      minzoom: 15,
+      layer: 'service',
+      minzoom: 13,
       maxzoom: 15
     }
     return f 
 },
   osm_planet_public_area_p: f => {
     f.tippecanoe = {
-      layer: 'publicap',
-      minzoom: 13,
+      layer: 'public',
+      minzoom: 11,
       maxzoom: 15
     }
     return f 
