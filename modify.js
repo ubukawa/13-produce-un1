@@ -803,10 +803,11 @@ const lut = {
   },
   osm_planet_worship_area_p: f => {
     f.tippecanoe = {
-      layer: 'worshipap',
-      minzoom: 14,
+      layer: 'worship',
+      minzoom: 13,
       maxzoom: 15
     }
+    f.properties._source = 'osm_planet_worship_area_p'
     return f
  },
   osm_planet_barrier_lines: f => {
@@ -819,16 +820,17 @@ const lut = {
  },
   osm_planet_heritage_area_p: f => {
     f.tippecanoe = {
-      layer: 'heritagep',
+      layer: 'heritage',
       minzoom: 15,
       maxzoom: 15
     }
+    f.properties._source = 'osm_planet_heritage_area_p'
     return f 
 },
   osm_planet_landuse_park_reserve: f => {
     f.tippecanoe = {
-      layer: 'reservea',
-      minzoom: 10,
+      layer: 'area_park',
+      minzoom: 7,
       maxzoom: 15
     }
     return f 
@@ -843,18 +845,20 @@ const lut = {
 },
   osm_planet_other_area_p: f => {
     f.tippecanoe = {
-      layer: 'otherareap',
+      layer: 'otherarea',
       minzoom: 15,
       maxzoom: 15
     }
+    f.properties._source = 'osm_planet_other_area_p'
     return f 
 },
   osm_planet_places: f => {
     f.tippecanoe = {
-      layer: 'placep',
+      layer: 'place',
       minzoom: 7,
       maxzoom: 15
     }
+    f.properties._source = 'osm_planet_places'
     return f 
 },
   osm_planet_places_areas: f => {
