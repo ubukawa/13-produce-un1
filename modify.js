@@ -121,7 +121,7 @@ const lut = {
   // 1. nature
   un_mission_lc_ls: f => {
     f.tippecanoe = {
-      layer: 'landuse',
+      layer: 'landcover',
       minzoom: 9,
       maxzoom: 15
     }
@@ -129,7 +129,7 @@ const lut = {
   },
   un_glc30_global_lc_ms: f => {
     f.tippecanoe = {
-      layer: 'landuse',
+      layer: 'landcover',
       minzoom: 6,
       maxzoom: 9
     }
@@ -198,7 +198,7 @@ const lut = {
   // 2. water
   custom_planet_ocean_l08: f => {
     f.tippecanoe = {
-      layer: 'hydrography',
+      layer: 'ocean',
       minzoom: 6,
       maxzoom: 7
     }
@@ -206,7 +206,7 @@ const lut = {
   },
   custom_planet_ocean: f => {
     f.tippecanoe = {
-      layer: 'hydrography',
+      layer: 'ocean',
       minzoom: 7,
       maxzoom: 15
     } 
@@ -214,7 +214,7 @@ const lut = {
   },
   custom_planet_land_a_l08: f => {
     f.tippecanoe = {
-      layer: 'base',
+      layer: 'landmass',
       minzoom: 6,
       maxzoom: 8
     }
@@ -222,7 +222,7 @@ const lut = {
   },
   custom_planet_land_a: f => {
     f.tippecanoe = {
-      layer: 'base',
+      layer: 'landmass',
       minzoom: 8,
       maxzoom: 15
     } 
@@ -253,7 +253,7 @@ const lut = {
   },
   custom_ne_rivers_lakecentrelines: f => {
     f.tippecanoe = {
-      layer: 'hydrography',
+      layer: 'water',
       minzoom: 6,
       maxzoom: 7
     }
@@ -376,14 +376,6 @@ const lut = {
     }
     return f
   },
-  unhq_bnda_cty: f => {
-    f.tippecanoe = {
-      layer: 'cty',
-      minzoom: 7,
-      maxzoom: 8
-    }
-    return f
-  },
   // 4. road
   osm_planet_major_roads: f => {
     f.properties.highway = f.properties.fclass
@@ -419,8 +411,8 @@ const lut = {
   // 6. route
   osm_planet_ferries: f => {
     f.tippecanoe = {
-      layer: 'route',
-      minzoom: 8,
+      layer: 'ferries',
+      minzoom: 6,
       maxzoom: 15
     }
     f.properties.route = f.properties.fclass
@@ -776,7 +768,7 @@ const lut = {
   un_global_places: f => {
     f.tippecanoe = {
       layer: 'place',
-      minzoom: 7,
+      minzoom: 6,
       maxzoom: 15
     }
     f.properties._source = 'un_global_places'
