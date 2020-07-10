@@ -174,7 +174,8 @@ const lut = {
   osm_planet_landuse_natural_medium: f => {
     f.tippecanoe = {
       layer: 'nature',
-      minzoom: flap(f, 15),
+      minzoom: 8,
+//      minzoom: flap(f, 15),
       maxzoom: 15
     }
     switch (f.properties.fclass) {
@@ -262,8 +263,8 @@ const lut = {
   osm_planet_waterways_small: f => {
     f.tippecanoe = {
       layer: 'water',
-      minzoom: 10,
-      maxzoom: 12
+      minzoom: 7,
+      maxzoom: 10
     }
     f.properties.waterway = f.properties.fclass
     delete f.properties['fclass']
@@ -272,7 +273,7 @@ const lut = {
   osm_planet_waterways_large: f => {
     f.tippecanoe = {
       layer: 'water',
-      minzoom: 13,
+      minzoom: 10,
       maxzoom: 15
     }
     f.properties.waterway = f.properties.fclass
@@ -401,7 +402,7 @@ const lut = {
   osm_planet_railways: f => {
     f.tippecanoe = {
       layer: 'railway',
-      minzoom: 10,
+      minzoom: 19,
       maxzoom: 15
     }
     f.properties.railway = f.properties.fclass
@@ -423,7 +424,7 @@ const lut = {
   osm_planet_runways: f => {
     f.tippecanoe = {
       layer: 'structure',
-      minzoom: 13,
+      minzoom: 11,
       maxzoom: 15
     }
     f.properties.aeroway = f.properties.fclass
@@ -505,19 +506,18 @@ const lut = {
   // 8. building
   osm_planet_landuse_urban: f => {
     f.tippecanoe = {
-      layer: 'building',
-      minzoom: flap(f, 12),
+      layer: 'area_building',
+      minzoom: 12,
       maxzoom: 15
     }
-    if (f.tippecanoe.minzoom > 12) f.tippecanoe.minzoom = 12
     f.properties.landuse = f.properties.fclass
     delete f.properties['fclass']
     return f
   },
   osm_planet_other_buildings: f => {
     f.tippecanoe = {
-      layer: 'building',
-      minzoom: flap(f, 15),
+      layer: 'area_building_o',
+      minzoom: 12,
       maxzoom: 15
     }
     f.properties.building = f.properties.fclass
