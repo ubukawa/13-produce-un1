@@ -305,6 +305,22 @@ const lut = {
     }
     return f
   },
+ unhq_bnda_a1_p: f => {
+    f.tippecanoe = {
+      layer: 'hq_bnd',
+      minzoom: 6,
+      maxzoom: 8
+    }
+    return f
+  },
+  unhq_bnda_a2_p: f => {
+    f.tippecanoe = {
+      layer: 'hq_bnd',
+      minzoom: 8,
+      maxzoom: 15
+    }
+    return f
+  },
   custom_unmap_0_bnda_a1: f => {
     f.tippecanoe = {
       layer: 'c_bnd',
@@ -314,6 +330,22 @@ const lut = {
     return f
   },
   custom_unmap_0_bnda_a2: f => {
+    f.tippecanoe = {
+      layer: 'c_bnd',
+      minzoom: 8,
+      maxzoom: 15
+    }
+    return f
+  },
+  custom_unmap_0_bnda_a1_p: f => {
+    f.tippecanoe = {
+      layer: 'c_bnd',
+      minzoom: 6,
+      maxzoom: 8
+    }
+    return f
+  },
+  custom_unmap_0_bnda_a2_p: f => {
     f.tippecanoe = {
       layer: 'c_bnd',
       minzoom: 8,
